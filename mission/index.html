@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.44" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122081322-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122081322-1');
+</script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" rel="stylesheet"> 
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="bunsanweb">
+<title>Mission of bunsanweb - bunsanweb</title>
+</head>
+<body>
+
+<div class="container">
+
+	<header role="banner">
+		<div class="header-logo">
+			<a href="/"><h1><img src="/images/bunsanlogo1.png" width="203" alt="bunsanweb"></h1></a>
+		</div>
+
+
+     <nav>
+          <ul>
+               <li><a href="/">Home</a></li>
+               <li><a href="/mission/">Mission</a></li>
+               <li><a href="/history/">History</a></li>
+               <li><a href="/#docs">Docs</a></li>
+               <li><a href="/#contact">Contact</a></li>
+          </ul>
+     </nav>
+	</header>
+
+
+</div>
+<div class="contents_area">
+<div class="container">
+	<main role="main">
+
+
+
+		<article itemscope itemtype="http://schema.org/BlogPosting">
+			<h1 class="entry-title" itemprop="headline">Mission of bunsanweb</h1>
+
+
+
+			<section itemprop="entry-text">
+				<blockquote>
+<p>The internet protocol is specifically limited in scope to provide the functions necessary to deliver a package of bits (an internet datagram) from a source to a destination over an interconnected system of networks.
+<cite> (INTERNET PROTOCOL, RFC791)</cite></p>
+</blockquote>
+
+<p>The Internet is, as described in RFC791, a mechanism that enables messages to be sent directly from an end-point machine to another machine independently of the relationships among many intermediate routers. The Internet enables you to desirably build an end-to-end system which requires processing only at both ends.
+Based on the end-to-end structure of the Internet, the Web structure was created where Web pages on individual machines are connected with each other via hyperlink. This Web environment forms an &#8220;individual&#8221; using an end-point machine as a unit where information on a variety of activities is aggregated.</p>
+
+<p>Bunsanweb treats this &#8220;individual&#8221; that is an aggregation of activities formed on the Web as a basic unit.
+Bunsanweb proposes an end-to-end distributed network that is the base structure for handling these individuals on the Web network.</p>
+
+<p><br />
+One of the mechanisms of bunsanweb is a general-purpose reverse proxy for the Web. This system has not yet been given a name.
+This general-purpose reverse proxy mechanism consists of an intermediate program used as a general-purpose reverse proxy for programs that are externally inaccessible and the JavaScript library for an end point communicating with this intermediate program.</p>
+
+<p>The general-purpose reverse proxy mechanism enables the user programs at end points to be accessed via an exclusive URI based on the hash value of a public key generated from their respective random number value.
+This intermediate program only requires the end point to add a self-signature to the hash value of the public key. Neither procedures for user authentication such as user account registration nor modification of a message during Web request processing is necessary.
+Therefore, even a small program that runs on a Web browser can behave desirably as an end point accessible on the Web by just being executed.
+For the backend implementation on this end point, &#8216;WebSocket.&#8217; which is one of the standard functions of a browser, is used. For the interface for programming on this end point, similarly, the object group related to the &#8216;fetch()&#8217; API of the browser standard is used to provide the mechanism for the program to be handled in the same mechanism as &#8216;FetchEvent&#8217; of &#8216;ServiceWorker.&#8217;
+Programs using the general-purpose reverse proxy mechanism only use the object provided by these browser standards.</p>
+
+<p>Bunsanweb first downsizes the end point units that are reachable on the Web to units of programs that are individually run, not to units of clouds or services which manage multiple users.
+A program on a browser can serve as a server at the layer of Web programming, which is the base for constructing an end-to-end mechanism.
+This means that end points in bunsanweb will be desirably configurable programs, not servers or clients.
+For example, SDP data exchange for WebRTC connection is currently achieved through the signaling service focusing on SDP exchange in the center. However, this general-purpose reverse proxy mechanism enables WebRTC connections to be established without a specialized signaling service by directly posting OfferSDP to the URL indicating the end point on the Answer side.</p>
+
+<p>A service on the Web is implemented as an intermediate exclusive for specific messages that are exchanged between users.
+The general-purpose proxy mechanism, in contrast, is a general-purpose intermediate program for messages that are exchanged between individuals. This mechanism is available for all messages and Web-based programs.</p>
+
+<p>In bunsanweb, a general event stream, which is universal on the Web, for an event can exist on an endpoint. This universal event stream is called a &#8220;<em>hashnet</em>.&#8221;
+In a <em>hashnet</em>, a &#8220;Person&#8221; is handled as an endpoint where an event occurs. Event streams are exchanged between such endpoints. Inside each endpoint, it can be made possible to access an event treated as a universal event stream that occurs at any other endpoint.</p>
+
+<p>Events handled here are Web documents that contain any content, and for each of such documents, a fixed URL is determined based on its content. To guarantee the identifiability of each content, the general information of an event, such as the issuer URL and date and time, and digital signatures and other items, is defined.</p>
+
+<p>At an endpoint, this event is subscribed to from the event stream filtered based on the content of the event.</p>
+
+<p>That is, the <em>hashnet</em> proposes a mechanism different from a typical event system, which issues and subscribes to an event for a fixed event queue. To achieve the mechanism, an event is defined in the <em>hashnet</em> to have <em>contexts</em>, as the mechanism that narrows down event streams based on the event content.</p>
+
+<p>Each <em>context</em> is a character string, indicating the type of information and status of the content, determined on the assumption that it will be subscribed to by others. The &#8220;<em>contexts</em>&#8221; is the mechanism where a set of such <em>contexts</em> is embedded into an event, and events can be narrowed down by a set of <em>contexts</em>.</p>
+
+<p>The event issuer embeds <em>contexts</em> based on the content of the event. The event subscribers process a variety of events picked up from the <em>contexts</em>.</p>
+
+<p>For these issuers and subscribers, a set of <em>contexts</em> is handled as a virtual event queue. Note that such sets do not need to be the same between the issuer to whom the event is passed and the subscriber. This means that both the issuer and subscriber as &#8220;Persons&#8221; gain the ability to freely configure each event stream.</p>
+
+<p>On the other hand, as is the case where timelines are handled in Web Services, event queues are specified fixedly on the Web, and this often causes dependence on a specific Web service that embraces targeted users. In such a case, the timeline of the Web service is expected, a program that registers and accesses an account is granted, and the program interprets this specific event format and then processes the target information. Specifying a specific Web service handled as a specific event queue, as mentioned above, is a significant reason why a person, as a user, depends on Web Services. In the end-point system that bunsanweb aims to establish, where &#8220;Persons&#8221; are independent, a departure from this dependency on a specific event queue is necessary. The <em>hashnet</em> enables each &#8220;Person&#8221; at an endpoint to optionally assume their virtual set of &#8220;Persons&#8221; through <em>contexts</em>, and then to interact with its virtual set in an event.</p>
+
+<p>The <em>hashnet</em> is also a network among these endpoints, where a universal event stream is configured through coordination among independent endpoints.
+For individual endpoints without being linked with others, their regions of universality are each made up of only the events for themselves.The event queues at other endpoints are merged with own event queue, and a universal event stream is made available there. Dynamic changes on the <em>hashnet</em>, such as joining to an endpoint, are also presented with an event on the <em>hashnet</em>. To maintain the <em>hashnet</em>, an endpoint itself of the <em>hashnet</em> is also an endpoint application of universal events using this <em>hashnet</em>.
+Bunsanweb uses an architecture where the information on a &#8220;Person&#8221; is owned and managed by the person themself. In this architecture, an access privilege is assigned to individual functions, to process information collected to the &#8221;Person.&#8221;.</p>
+
+<p>Bunsanweb provides a program that integrates and maintains information on a &#8220;Person&#8221; and controls access to the program codes making up each function so that the  function can treat the information as the identity of the &#8220;Person.&#8221; This program that can be treated as a &#8220;Person&#8221; is called the &#8220;<em>dashboard</em>.&#8221;</p>
+
+<p>Unlike Web Services where the information of all the users is collected into a system for the functions to use the information, in bunsanweb, the functions of all the systems that use the information on a &#8220;Person&#8221; are collected to the &#8220;Person&#8221;, and then executed.</p>
+
+<p>The <em>dashboard</em> provides a common URI space to each &#8220;Person,&#8221; like &#8220;localhost&#8221; that is used for a domain name. This URI space fora &#8220;Person&#8221; themself is called &#8220;me:&#8221; URI.</p>
+
+<p>From the system&#8217;s point of view, the difference between each &#8220;Person&#8221; is the difference between the details of the data. Therefore, by using the common URI to the &#8220;Person&#8221; in the program code that handles data, the same code is implemented in the functions of the system that process &#8220;Person.&#8221;</p>
+
+<p>In other words, the <em>dashboard</em> provides an information network structure that starts from &#8220;me:&#8221; URIs, each of which may have different content, and then expands to the hyperlinked information on the Web.
+The functions of a system display and update the information of each &#8220;Person&#8221; according to the information structure provided by the <em>dashboard</em>. An aggregation of such functions for &#8220;Person&#8221; makes up a system.</p>
+
+<p>A system function is newly added from a spontaneous demand for for the information of a &#8220;Person&#8221; that has already existed. Also, when a system function is implemented, information added by the function causes demands of other functions to be made. Repeating this behavior makes the system evolve itself.</p>
+
+<p>Bunsanweb uses this <em>dashboard</em> to manage the information for the mechanism that begins with establishment of the identity of a &#8220;Person&#8221; on the Web.</p>
+
+<p>To make &#8220;Persons&#8221; accessible through a general reverse proxy, a permanent key-pair is necessary to present a permanent identity as a &#8220;Person.&#8221; Also, in a <em>hashnet</em>, this pair of keys is used as the identity of the issuer of an event issued from each system.
+That is, the information of a &#8220;Person&#8221; on a <em>dashboard</em> begins with storing the  key-pair for presenting the identity on the <em>hashnet</em>.</p>
+
+<p>The <em>hashnet</em> system then adds information (information necessary for the &#8220;event issuer,&#8221; etc.) to be used for the function group for expanding the information of a &#8220;Person.&#8221; While different systems in bunsanweb use such existing information, they introduce their own information to each system to expand the information of each &#8220;person.&#8221;</p>
+
+<p>The programs that use the <em>dashboard</em> and <em>hashnet</em> are executed on the premise of permission to access the information of a &#8220;Person&#8221; treated as an identity. The programs issue to the <em>hashnet</em> an event with a digital signature signed using the identity.</p>
+
+<p>Some of such programs may accept and process external information for executing part of systems, such as processing conventional account data.</p>
+
+<p>As mentioned above, in bunsanweb, &#8220;programs&#8221; to access the information of &#8220;Person&#8221; need to be made portable. For each portable package, permissions for access to the information of &#8220;Persons&#8221; and their execution states are managed.</p>
+
+<p>This portable unit for programs using the <em>dashboard</em>/<em>hashnet</em> is called &#8220;<em>inst</em>.&#8221; By executing this <em>inst</em> at a place where a &#8220;Person&#8221; exists, the information of the &#8220;Person&#8221; on the <em>dashboard</em>, the network of universal events on the <em>hashnet</em>, and arbiterary endpoints of the Web  through the general reverse proxy are integrated.<br />
+Each <em>inst</em> serves as a function on the endpoint as a &#8220;Person&#8221;. An <em>inst</em> is categorized as a tool or command that processes the information of a &#8220;Person&#8221; within a <em>dashboard</em>. Each <em>inst</em> can be chained through an event via a <em>hashnet</em> and is enabled to access the Web by the general reverse proxy, which achieves loose coupling on the Web and flexible system configuration.</p>
+
+<p>A system in bunsanweb is thought to consist of a combination of autonomous tools and commands, not as a monolithic integrated application, and has a structure whose configuration can be flexibly customized. The preferable policies here are combining a text editor and shell commands rather than using IDE, and adding bookmarklets or add-ons to the browser rather than using a dedicated client. In this context, text editors and browsers are the mix of front-ends of systems that differ from user to user. A network relationship is established among &#8220;Persons&#8221; using such text editors or browsers through these varieties of systems.</p>
+
+<p>Bunsanweb aims for this kind of open relationship between systems through peers, <em>inst</em>, and networks.</p>
+
+<p>And this is the relationship inherent on the Internet and the Web.</p>
+
+			</section>
+		</article>
+	</main>
+
+<div class="sp">
+</div>
+</div>
+</div>
+<div class="contact">
+
+
+	<footer role="contentinfo">
+		<div class="footer-link">
+			
+			
+			
+			
+			
+		</div>
+		<div class="copyright">&copy; KANATA</div>
+	</footer>
+
+</div>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

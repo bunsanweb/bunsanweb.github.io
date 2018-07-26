@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.44" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122081322-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122081322-1');
+</script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" rel="stylesheet"> 
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="bunsanweb">
+<title>History of bunsan - bunsanweb</title>
+</head>
+<body>
+
+<div class="container">
+
+	<header role="banner">
+		<div class="header-logo">
+			<a href="/"><h1><img src="/images/bunsanlogo1.png" width="203" alt="bunsanweb"></h1></a>
+		</div>
+
+
+     <nav>
+          <ul>
+               <li><a href="/">Home</a></li>
+               <li><a href="/mission/">Mission</a></li>
+               <li><a href="/history/">History</a></li>
+               <li><a href="/#docs">Docs</a></li>
+               <li><a href="/#contact">Contact</a></li>
+          </ul>
+     </nav>
+	</header>
+
+
+</div>
+<div class="contents_area">
+<div class="container">
+	<main role="main">
+
+
+
+		<article itemscope itemtype="http://schema.org/BlogPosting">
+			<h1 class="entry-title" itemprop="headline">History of bunsan</h1>
+
+
+
+			<section itemprop="entry-text">
+				
+
+<p>Bunsanweb currently views that the reason why the Web has expanded worldwide lies in the network itself, which enables its participants to freely conduct their activities through hyperlinks, using URLs where their permanent meanings are assigned.</p>
+
+<p>Bunsanweb is designed to provide the architecture where freedom is achieved not only for hyperlinked documents, but for programmable networks as well. This is a challenge for achieving the World Wide Web of event streams that are currently &#8220;separated&#8221; by each specific event queue.</p>
+
+<h2 id="1-prehistory-of-bunsanweb-anatta-engine-s">1. Prehistory of bunsanweb: Anatta Engine(s)</h2>
+
+<h3 id="1-1-finding-a-suitable-programing-archtecture-for-the-web">1.1 Finding a suitable programing archtecture for the web</h3>
+
+<p>Bunsanweb, however, did not focus on the network itself from the beginning. The project started viewing that the high loose coupling enabled free activities on the Web. This property has been brought about by the architecture called &#8220;REST (REpresentational State Transfer)&#8221; used for the Web.</p>
+
+<p>In contrast, in the  programming world, systems were still designed in the conventional  way, which synchronously processed fixed data structures, even in the Web era.</p>
+
+<p>The Web application &#8220;server&#8221; centrally processes data sets stored in RDBMS and then converts the processed data into Web pages. A browser is used as a &#8220;client&#8221; for accessing the server. This mechanism does not provide free relationship beyond the domain of the owner of documents that is enabled by hyperlink.</p>
+
+<p>Considering the above, we thought that suitable architecture for the Web, as a base platform, was required for programs, and thus implemented native support for REST for programs themselves.</p>
+
+<p>The environment designed for this programming architecture is called &#8220;Anatta Engine(s)&#8221;.</p>
+
+<p>We thought that the browser-side mechanism that processes links, rather than the server-side structure that converts data, is the key for the strength of the Web. That is, the mission of the project is to enable the architecture to make the entire programming process take advantage of the capability of the browser that processes links.</p>
+
+<h3 id="1-2-for-programs-that-enable-hyperlinks">1.2 For programs that enable hyperlinks</h3>
+
+<p>First of all, we enabled the Anatta Engine(s) to execute an HTML with the script tags as a program source, which was the case with the JavaScript environment for a browser equipped with the DOM and AJAX at that time.</p>
+
+<p>For such an HTML/JavaScript program, the Anatta Engine(s) provides the back-end system that can flexibly place those programs to programmatically-fixed URI, and JavaScript APIs for the front end that enable link processing to be described without direct operation of the DOM structure, which is the model of the &#8220;Resource&#8221; abstracted as a container for hyperlinks. These environments enable users to write a program for loosely coupled processing of a Resource.</p>
+
+<p>In these environments, the Anatta Engine(s) makes such a program itself, which enables loosely-coupled processing of a Resource, accessible as one of those Resources via hyperlink. That is, the Anatta Engine(s) serves as a loosely-coupled environment based on the Web for the programs, where Resources are basically accessed as the element of a system via the hyperlink without distinction between the server side and client side.</p>
+
+<p>A system in such an environment starts with the AJAX processing using JavaScript on the browser from an action on the user&#8217;s browser, and links access one another to the Resources that are operating in parallel, and finally reach an asynchronous access via URL to a document storage of the primitive NoSQL type.</p>
+
+<h3 id="1-3-making-the-concept-of-the-dispersed-social-networking-system">1.3 Making the concept of the dispersed social networking system</h3>
+
+<p>Next, for the Anatta Engine(s) environment as a system having the property of loose coupling, we brought in the idea of creating a social networking system that handles a network structure between participants.</p>
+
+<p>This idea raises the issue of how a loosely-coupled social networking system can be dispersedly configured. From the viewpoint for the Web, dividing by functionality based on a single, central database is not an option.</p>
+
+<p>A &#8220;state&#8221; including individual link navigation exists in the browsers of individuals at the primary level. The data of activities on a social network are generated from an individual&#8217;s respective &#8220;state&#8221; and then uploaded to a server for central management, from which the data are distributed to the concerned parties.</p>
+
+<p>Based on the above, we determined to proceed with the system design for making dispersion occur on an individual basis. The system establishes social networking where individual data are managed on an individual basis and individuals get only their necessary information from other individuals through a program executed for their own data in their own device.</p>
+
+<p>In this system design, the programs that serve as the functionalities of the social networking system are written in the same way as the processing of the data of abstract &#8220;individuals.&#8221; Starting from an &#8220;individual,&#8221; the system uses the link structure of a URI where the meaning of the relationship between links is fixed and the result varies depending on the information beyond the URI. Therefore, decentralization of a social network on an individual basis requires, as a Resource on the Web, standardization for programs that enables links to be followed starting from &#8220;individuals.&#8221;</p>
+
+<h3 id="1-4-necessity-of-universal-event-stream">1.4 Necessity of universal event stream</h3>
+
+<p>In this social network system dispersed on an individual basis, the event data processed by programs in the Anatta Engine(s) that are operated as a system are equivalent to the activity data of individuals that are able to be processed by application programs on a social network.</p>
+
+<p>In a social network, activity streams, which are timelines handled by individuals, are aggregated in a list that includes the activities of other individuals based on the explicitly associated primary and secondary relationships. Applications on a social network are processed in the range of the activities obtained from these limited relationships.</p>
+
+<p>On the other hand, individuals wish for functions for serendipity using information from activities other than those having a specified relationship. These demands are for a global timeline independent of the relationship that individuals have. This can be considered as the model of a network where all the individuals on a social network are (mechanically) associated separately from the &#8216;follow&#8217; relationship.</p>
+
+<p>Generally, program processing can be considered as converting all the data or narrowed-down results under some conditions. Program processing, therefore, requires the concept that universal activity streams are able to be always handled.</p>
+
+<p>From the viewpoint of universal streams, individual streams are the streams filtered to activity streams including their actors in the individual&#8217;s follower relationship.</p>
+
+<p>The current social networking services seek this universality and thus select specific services that meet it. As a result, we can view that the state before the Web has returned, which is the relationship where individuals depend on specific services.</p>
+
+<h2 id="2-open-network-by-universal-event-stream">2. Open network by universal event stream</h2>
+
+<h3 id="2-1-dashboard-inst-and-site-that-self-administers-personal-data">2.1 &ldquo;dashboard&rdquo;, &ldquo;inst&rdquo;, and &ldquo;site&rdquo; that self-administers personal data</h3>
+
+<p>In the design of a social network that self-administers personal data using the Anatta Engine(s), we first came up with the following model: A social network is configured in such a way that individuals manage their &#8220;own data&#8221; in each localhost, process their personal data to those that can be made public through the Web and share the data with others, and also access others related to their individuals.</p>
+
+<p>&#8220;Persons&#8221; on a social network primarily run programs that locally manage personal data and a variety of other programs that update personal data through local internal processing, and generate sharable data that can be accessed via the Web.</p>
+
+<p>The program for managing this personal data is called the &#8220;dashboard.&#8221; The package system for programs that perform internal processing on the dashboard is called &#8220;inst.&#8221; The Web server that mirrors the sharable part of the data in the dashboard on the cloud is called the &#8220;site.&#8221;</p>
+
+<p>The primary personal data are the profile of the person, which is the set of attribute values of the person, such as the name, organization, and preferences. These data are shared based on the relationship on the social network, such as relationships with friends, which, in turn, are customized to desired data.</p>
+
+<p>In this mechanism mentioned above, the &#8220;activities&#8221; making up a personal timeline are also part of the personal data. The timeline, which is the list of activities, is the information to be shared through the &#8220;site.&#8221; An individual obtains activities on the timeline shared by others through relationships with friends or followers, and then runs the program that merges the activities into his or her own timeline.</p>
+
+<h3 id="2-2-universal-event-network-hashnet">2.2 Universal event network, &ldquo;hashnet&rdquo;</h3>
+
+<p>Activities on a timeline as a social network are the array of messages interpreted by humans, but part of them can be made to be automatically processed by a &#8220;bot&#8221; program. This bot processing was performed using the &#8220;inst,&#8221; as is the case with the profile processing. However, for a bot, an activity that the bot itself responds to is an event itself for the program.</p>
+
+<p>Therefore, the dispersing mechanism of the timeline as a social network was separated from the dashboard, and was newly designed as a system for the universal event stream of the Resource programs in the Anatta Engine(s) level. This is the start of the universal event network, which is now called &#8220;hashnet.&#8221;</p>
+
+<h3 id="2-3-universal-event-stream-from-person-to-8220-peer-8221-basis">2.3 Universal event stream: From person to &#8220;peer&#8221; basis</h3>
+
+<p>The design mentioned above is considered on a &#8220;Person&#8221; basis; however, on the hashnet, an event issuer is one that issues events throughout a program including things like bots, and the unit centered on this issuer on the Internet is defined as a &#8220;peer.&#8221; The underlying mechanism of the hashnet is that these peers autonomously share their own event lists and pull the shared events amongst one another.</p>
+
+<p>While the issuer of an activity was the first concern for a timeline of a social network, the content to process is most focused on by a program handling an event. This means that filtering events by the kind of content rather than the unit of the issuer is a favorable event stream.</p>
+
+<p>The above-mentioned is a model that assumes a single event stream that can be universally handled across the world, and then uses part of the stream filtered by content. Because an event made by a &#8220;Person&#8221; is issued to this single universal event stream, no event channel of an issuer is specified. (In the case of trivial model, event channels must be specified for issuing events).</p>
+
+<p>In this model, delays or losses occur corresponding to the range of targets in a universal event stream. But narrowing down the target range by content reduces such delays or losses. The reaching order of events may not match the order of occurrence of the events. However, when an event itself is made to have the link to the &#8220;previous event&#8221; in its content, partial ordering is possible by specifying the order relation of event issuers.</p>
+
+<h3 id="2-4-universal-event-stream-introduction-of-contexts">2.4 Universal event stream: Introduction of &ldquo;contexts&rdquo;</h3>
+
+<p>When a program code is written, the type of data to be processed is focused on, that is, a program specifies the types of data for events. In a universal event stream, events processed by programs are likely to be filtered by these data type.</p>
+
+<p>Considering the above, it was assumed that multiple data groups are incorporated as the content of events, and thus the information structure to clarify such data groups was introduced in the structure of events. This information is called &#8220;contexts.&#8221; An event has &#8220;contexts&#8221; embedded as a set of tags. Information corresponding to each context exists in the content of an event.</p>
+
+<p>The contexts are also used in a hashnet system. It can be said that an event stream first exists in a local peer, and as a result of its subscription processing, a program runs so that events are shared. For example, when the owner of a peer issues such an event as &#8220;F followed a peer&#8221; to add a new peer to the network, the followed peer itself receives the event &#8220;Followed a peer,&#8221; and then the added peer is verified, and subscription and merge processing are also performed. Then, when this &#8220;Followed a peer&#8221; event is further shared with another peer, peers on the network follow the peer.</p>
+
+<p>This behavior occurs because the hashnet consists of a single peer as a system, and it expands to a network when these functionalities based on the event processing are added to the peer. When a mechanism as networking is added, an event for it is first defined, and then a program that interprets the event is implemented to act on the peer of the hashnet.</p>
+
+<p>For example, we designed the mechanism of the &#8220;Request for participation from a new peer,&#8221; like an invitation, so that the processing of &#8220;Following a peer&#8221; by an existing peer is achieved by the issuance of an event that includes the necessary information and its verification processing.</p>
+
+<h3 id="2-5-follow-strategy-at-each-peer">2.5 Follow strategy at each peer</h3>
+
+<p>A single peer repeats the following operations: follows another peer, subscribes to its event stream, and merges the event stream into its own event stream. A peer list is configured with followed peers, and the subscription frequency is set for each peer in the peer list, and then actual network accesses are made according to these peer frequencies. The total of this subscription frequencies has the upper limit, and setting the subscription frequency for each peer based on this upper limit is called the follow strategy.</p>
+
+<p>We have developed more than one follow strategies for subscription at peers. The first strategy is the extension of the follower subscription on a social network. This strategy aims to increase the number of events related to the contexts by obtaining distances to other peers based on the contexts, and creating a system of neighborhood clusters for nearby peers to follow each other</p>
+
+<p>However, program processing needs to handle not only large numbers of events of similar types, but a variety of types of events as well. For this reason, we determined to adopt also the strategy for broad subscription by using the distance of the peer ID based on the public key for signature. This is similar to the handling of the distance in Kademlia of DHT.</p>
+
+<p>The former assumes an application program (bot), and the latter assumes a system program. The latter is meant to communicate broadly, for example, updates or other changes on the program of the hashnet.</p>
+
+<p>The prototype of the hashnet has been simulated and implemented under this design.</p>
+
+<h3 id="2-6-over-the-separations-of-event-queues">2.6 Over the separations of event queues</h3>
+
+<p>As is the case where the Web enables documents to be assigned to a single URI space and be freely linked across servers, the universal event stream model of the hashnet is designed to handle events across event queues, which are currently separated from each other, by assigning events to a space and then handling the events as an event stream in any extracted part of the space.</p>
+
+<p>This model does not require the relation assumed by the subscriber of an event to depend on the relation assumed by the issuer of the event. One of the objectives of the hashnet is to openly obtain relations by entering the event stream when the contexts specified by the issuer are included in part of the contexts selected by the subscriber.</p>
+
+<p>A peer may be able to encounter a new peer or other new contexts by, for example, processing subscriptions with contexts having open meaning.</p>
+
+<h3 id="2-7-first-step-toward-expansive-reconfiguration-introduction-of-general-reverse-proxy">2.7 First step toward expansive reconfiguration: Introduction of general reverse proxy</h3>
+
+<p>We are now dissolving the elements making up the architecture integrated, at first, as the Anatta Engine(s) into element technologies that can be achieved through Web technologies already incorporated into the most modern browsers, and are re-configuring such elements so that they can be used in multiple stages as the technical bases for making up the central concept&ndash;hashnet.</p>
+
+<p>The first step of the approach above is using the &#8220;general reverse proxy&#8221; mechanism. This mechanism enables Web access to desired JavaScript programs including scripts that run on the browser on the machine within the firewall, through &#8220;general reverse proxy&#8221; in the cloud without any preliminary procedures such as account registration. This mechanism makes the &#8220;programs handled as Resource&#8221; in the Anatta Engine(s) available in more varieties and wider areas. The mechanism does not provide its unique API structure, and thus, users can use programs in the same way as using the standardized ServiceWorker API.</p>
+
+<p>Peers were at first designed to work with the dedicated system &#8220;site&#8221; mentioned above that was mirrored in the cloud to make accessible the information on the locally-run program &#8220;dashboard.&#8221; However, the general reverse proxy made unnecessary such dedicated intermediary nodes for individual systems and enabled direct access from the Web to peers. Not only this example, but many systems currently using dedicated functions for Web Services in intermediary nodes in the cloud are expected to transit to end-to-end systems by using such general-purpose intermediaries. Also, the hashnet itself may serve as a general-purpose intermediary for events to make end-to-end links.</p>
+
+<p>What makes the above possible is the advancement of Web technology. ServiceWorker and WebSocket, used to achieve the &#8220;general reverse proxy,&#8221; are standardized Web technologies. Unfortunately, these technologies may often be used to enhance dependency relations in Web Services. However, bunsanweb aims to expand the possibility of an open network with future potential advancement in Web technology.</p>
+
+			</section>
+		</article>
+	</main>
+
+<div class="sp">
+</div>
+</div>
+</div>
+<div class="contact">
+
+
+	<footer role="contentinfo">
+		<div class="footer-link">
+			
+			
+			
+			
+			
+		</div>
+		<div class="copyright">&copy; KANATA</div>
+	</footer>
+
+</div>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bunsanweb</title>
+    <link>https://bunsanweb.github.io/</link>
+    <description>Recent content on bunsanweb</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>KANATA</copyright>
+    <lastBuildDate>Tue, 24 Jul 2018 10:54:46 +0900</lastBuildDate>
+    
+	<atom:link href="https://bunsanweb.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mission of bunsanweb</title>
+      <link>https://bunsanweb.github.io/mission/</link>
+      <pubDate>Tue, 24 Jul 2018 10:54:46 +0900</pubDate>
+      
+      <guid>https://bunsanweb.github.io/mission/</guid>
+      <description>The internet protocol is specifically limited in scope to provide the functions necessary to deliver a package of bits (an internet datagram) from a source to a destination over an interconnected system of networks.  (INTERNET PROTOCOL, RFC791)
+ The Internet is, as described in RFC791, a mechanism that enables messages to be sent directly from an end-point machine to another machine independently of the relationships among many intermediate routers.</description>
+    </item>
+    
+    <item>
+      <title>History of bunsan</title>
+      <link>https://bunsanweb.github.io/history/</link>
+      <pubDate>Tue, 24 Jul 2018 02:04:10 +0900</pubDate>
+      
+      <guid>https://bunsanweb.github.io/history/</guid>
+      <description>Bunsanweb currently views that the reason why the Web has expanded worldwide lies in the network itself, which enables its participants to freely conduct their activities through hyperlinks, using URLs where their permanent meanings are assigned.
+Bunsanweb is designed to provide the architecture where freedom is achieved not only for hyperlinked documents, but for programmable networks as well. This is a challenge for achieving the World Wide Web of event streams that are currently &amp;#8220;separated&amp;#8221; by each specific event queue.</description>
+    </item>
+    
+  </channel>
+</rss>
