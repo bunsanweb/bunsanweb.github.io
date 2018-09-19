@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>KANATA</copyright>
-    <lastBuildDate>Tue, 24 Jul 2018 10:54:46 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 20 Sep 2018 01:48:34 +0900</lastBuildDate>
     
 	<atom:link href="https://bunsanweb.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Report on the Decentralized Web Summit 2018</title>
+      <link>https://bunsanweb.github.io/summit2018repo/</link>
+      <pubDate>Thu, 20 Sep 2018 01:48:34 +0900</pubDate>
+      
+      <guid>https://bunsanweb.github.io/summit2018repo/</guid>
+      <description>by Ryoichi Ichiyama
+We attended the Decentralized Web Summit 2018 which took place in San Francisco from July 31. This conference brought together engineers, activists, investors, and others from around the world who have an interest in realizing a decentralized world.
+The first day of the conference kicked off with an opening party hosted at the Internet Archive. The party featured a science fair where we had a table. At the science fair, we had the opportunity to network, give away some t-shirts and demo our working file transfer code (grp | https://github.</description>
+    </item>
     
     <item>
       <title>Mission of bunsanweb</title>
