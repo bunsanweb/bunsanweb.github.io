@@ -258,7 +258,7 @@ nav li + li{
 
 
 /* mission_btn */
-a.mission_btn{
+a.mission_btn, a.slide_btn {
   display: inline-block;
   margin: 30px auto 30px;
   padding: 0.55em 1.4em;
@@ -291,6 +291,24 @@ a.mission_btn:hover{
 .main_contents a.mission_btn:hover{
   background-color: #34505f;
 }
+
+
+.main_contents a.slide_btn{
+  margin: 20px auto 35px 65px;
+  padding: 0.55em 1.4em;
+  line-height: 1;
+  color: #e8eaec;
+  background-color: #4286f4;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.14rem;
+  font-weight:bold;
+  border-radius: 9px; 
+}
+.main_contents a.slide_btn:hover{
+  background-color: #34505f;
+}
+
 
 .contact a.mission_btn{
   display: inline-block;
@@ -343,6 +361,13 @@ a.mission_btn{
   border-radius: 9px; 
 }
 
+.main_contents a.slide_btn{
+  margin: 20px auto 35px 35px;
+  padding: 0.55em 1.4em;
+  font-size: 1rem;
+  border-radius: 9px; 
+}
+
 .contact a.mission_btn{
   margin: 20px auto 35px 35px;
   padding: 0.55em 1.4em;
@@ -384,6 +409,13 @@ height:100%;
   letter-spacing: 0;
   color: #89959c;
   margin: 2em auto 0.8em 20px;
+}
+
+.main_contents H3 .blue{
+  font-size: 1.90rem;
+  font-weight:bold;
+  letter-spacing: 0;
+  color: #4286f4;
 }
 
 .main_contents H4{
